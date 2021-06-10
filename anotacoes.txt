@@ -1,0 +1,41 @@
+Sites para estudos
+https://webpack.js.org/
+https://babeljs.io/
+
+Instalar a extensao Live Server para rodar a aplicação de dentro da pasta build (Producao)
+
+Criando um componente baseado em class
+
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
+Eliminando o constructor usando class fields
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+
+Usnado Array.map
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+Métodos de ciclo de vida
+https://pt-br.reactjs.org/docs/react-component.html
+https://pt-br.reactjs.org/docs/react-component.html#componentdidmount
+https://pt-br.reactjs.org/docs/react-component.html#componentdidupdate
+https://pt-br.reactjs.org/docs/react-component.html#componentwillunmount
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+Trabalhando com API
+https://jsonplaceholder.typicode.com/
+https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API
+
+Avaliação de curto circuito
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
+
+Operação Ternária JavaScript
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+
+Os Dados Fluem para Baixo
+https://pt-br.reactjs.org/docs/state-and-lifecycle.html#the-data-flows-down
+
+Manipulando eventos
+https://pt-br.reactjs.org/docs/handling-events.html
+
+SyntheticEvent
+https://pt-br.reactjs.org/docs/events.html  
