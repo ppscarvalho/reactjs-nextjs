@@ -1,9 +1,9 @@
-import "./styles.css";
-import { Component } from "react";
+import './styles.css';
+import { Component } from 'react';
 
 class HomeSetState extends Component {
   state = {
-    contador: 0
+    contador: 0,
   };
 
   handleClick = () => {
@@ -13,7 +13,7 @@ class HomeSetState extends Component {
       },
       () => {
         console.log(this.state.contador);
-      }
+      },
     );
   };
 

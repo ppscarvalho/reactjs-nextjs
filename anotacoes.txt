@@ -38,7 +38,9 @@ Manipulando eventos
 https://pt-br.reactjs.org/docs/handling-events.html
 
 SyntheticEvent
-https://pt-br.reactjs.org/docs/events.html  
+https://pt-br.reactjs.org/docs/events.html
 
 https://github.com/testing-library/jest-dom
 https://github.com/sapegin/jest-cheat-sheet
+
+https://www.npmjs.com/package/prop-types

@@ -1,8 +1,8 @@
-import { Component } from "react";
-import { loadPosts } from "./../../utils/load-posts";
-import { TextInput } from "./../../components/TextInput/index";
-import { Button } from "./../../components/Button/index";
-import { Posts } from "./../../components/Posts/index";
+import { Component } from 'react';
+import { loadPosts } from './../../utils/load-posts';
+import { TextInput } from './../../components/TextInput/index';
+import { Button } from './../../components/Button/index';
+import { Posts } from './../../components/Posts/index';
 
 class HomeClass extends Component {
   state = {
@@ -10,7 +10,7 @@ class HomeClass extends Component {
     allPosts: [],
     page: 0,
     postsByPage: 6,
-    searchValue: ""
+    searchValue: '',
   };
 
   async componentDidMount() {
@@ -23,7 +23,7 @@ class HomeClass extends Component {
     const postsAndPhotos = await loadPosts();
     this.setState({
       posts: postsAndPhotos.slice(page, postsByPage),
-      allPosts: postsAndPhotos
+      allPosts: postsAndPhotos,
     });
   };
 
@@ -36,7 +36,7 @@ class HomeClass extends Component {
     this.setState({ posts, page: nextPage });
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     const { value } = e.target;
     this.setState({ searchValue: value });
   };
@@ -45,7 +45,7 @@ class HomeClass extends Component {
     const { posts, page, postsByPage, allPosts, searchValue } = this.state;
     const noMorePosts = page + postsByPage >= allPosts.length;
     const filteredPosts = !!searchValue
-      ? allPosts.filter(post => {
+      ? allPosts.filter((post) => {
           return post.title.toLowerCase().includes(searchValue.toLowerCase());
         })
       : posts;
@@ -53,10 +53,7 @@ class HomeClass extends Component {
     return (
       <section className="container">
         <div className="search-container">
-          {!!searchValue &&
-            <h1>
-              SearchValue: {searchValue}
-            </h1>}
+          {!!searchValue && <h1>SearchValue: {searchValue}</h1>}
 
           <TextInput actionFn={this.handleChange} inputValue={searchValue} />
         </div>
@@ -65,12 +62,7 @@ class HomeClass extends Component {
         {filteredPosts.length === 0 && <p>Não existe post. =(:</p>}
 
         <div className="button-container">
-          {!searchValue &&
-            <Button
-              text="Load more posts"
-              onClick={this.loadMorePosts}
-              disabled={noMorePosts}
-            />}
+          {!searchValue && <Button text="Load more posts" onClick={this.loadMorePosts} disabled={noMorePosts} />}
         </div>
       </section>
     );

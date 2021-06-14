@@ -1,18 +1,25 @@
+import P from 'prop-types';
+
 import './styles.css';
 
-export const PostCard = (props) => {
-    const { post } = props;
+export const PostCard = ({ title, cover, body, id }) => {
   return (
     <div className="post">
-      <img src={post.cover} alt={post.title} />
+      <img src={cover} alt={title} />
       <div className="post-content">
         <h1>
-          {post.title} {post.id}
+          {title} {id}
         </h1>
-        <p>
-          {post.body}
-        </p>
+        <p>{body}</p>
+        <p>Alterado</p>
       </div>
     </div>
   );
+};
+
+PostCard.propTypes = {
+  title: P.string.isRequired,
+  cover: P.string.isRequired,
+  body: P.string.isRequired,
+  id: P.number.isRequired,
 };

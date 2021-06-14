@@ -10,12 +10,12 @@ export const Home = () => {
   const [posts, setPosts] = useState([]);
   const [allPosts, setallPosts] = useState([]);
   const [page, setPage] = useState(0);
-  const [postsByPage, setPostsByPage] = useState(6);
+  const [postsByPage] = useState(6);
   const [searchValue, setSearchValue] = useState('');
 
   const noMorePosts = page + postsByPage >= allPosts.length;
-  const filteredPosts = !!searchValue
-    ? allPosts.filter(post => {
+  const filteredPosts = searchValue
+    ? allPosts.filter((post) => {
         return post.title.toLowerCase().includes(searchValue.toLowerCase());
       })
     : posts;
@@ -29,7 +29,7 @@ export const Home = () => {
     setPage(nextPage);
   };
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { value } = e.target;
     setSearchValue(value);
   };
@@ -39,21 +39,15 @@ export const Home = () => {
     setPosts(postsAndPhotos.slice(page, postsByPage));
     setallPosts(postsAndPhotos);
   }, []);
-  
-  useEffect(
-    () => {
-      handleLoadPosts(0, postsByPage);
-    },
-    [handleLoadPosts, postsByPage]
-  );
+
+  useEffect(() => {
+    handleLoadPosts(0, postsByPage);
+  }, [handleLoadPosts, postsByPage]);
 
   return (
     <section className="container">
       <div className="search-container">
-        {!!searchValue &&
-          <h1>
-            SearchValue: {searchValue}
-          </h1>}
+        {!!searchValue && <h1>SearchValue: {searchValue}</h1>}
 
         <TextInput actionFn={handleChange} inputValue={searchValue} />
       </div>
@@ -62,12 +56,7 @@ export const Home = () => {
       {filteredPosts.length === 0 && <p>Não existe post. =(:</p>}
 
       <div className="button-container">
-        {!searchValue &&
-          <Button
-            text="Load more posts"
-            onClick={loadMorePosts}
-            disabled={noMorePosts}
-          />}
+        {!searchValue && <Button text="Load more posts" onClick={loadMorePosts} disabled={noMorePosts} />}
       </div>
     </section>
   );

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostCard /> should match snapshot 1`] = `
+<div
+  class="post"
+>
+  <img
+    alt="qui est esse 2"
+    src="https://i.pinimg.com/originals/1e/06/e1/1e06e107f0ca520aed316957b685ef5c.jpg"
+  />
+  <div
+    class="post-content"
+  >
+    <h1>
+      qui est esse 2
+       
+      1
+    </h1>
+    <p>
+      @olore placeat quibusdam ea quo vitae magni quis enim qui
+    </p>
+    <p>
+      Alterado
+    </p>
+  </div>
+</div>
+`;
