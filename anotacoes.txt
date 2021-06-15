@@ -44,3 +44,8 @@ https://github.com/testing-library/jest-dom
 https://github.com/sapegin/jest-cheat-sheet
 
 https://www.npmjs.com/package/prop-types
+
+37. Configurando Mock Service Worker para iniciar os testes
+https://mswjs.io/docs/getting-started/install
+
+
